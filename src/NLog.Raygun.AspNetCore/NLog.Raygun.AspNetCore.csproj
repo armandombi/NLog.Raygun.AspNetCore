@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Armando Bracho</Authors>
+    <Product />
+    <Copyright />
+    <Description>A custom NLog target for .Net Core projects to push exceptions into Raygun</Description>
   </PropertyGroup>
 
   <ItemGroup>
