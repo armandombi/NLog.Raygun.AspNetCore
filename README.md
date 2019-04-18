@@ -1,5 +1,5 @@
-NLog.Raygun
-===========
+NLog.Raygun.AspNetCore
+======================
 
 A custom [NLog] target that will push errors to [Raygun] on Asp .Net Core projects.
 
