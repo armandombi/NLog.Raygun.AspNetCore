@@ -6,12 +6,23 @@
     <Authors>Armando Bracho</Authors>
     <Product />
     <Copyright />
-    <Description>A custom NLog target for .Net Core projects to push exceptions into Raygun</Description>
+    <Description>A custom NLog target for Asp .Net Core projects to push exceptions into Raygun</Description>
+    <PackageProjectUrl>https://github.com/armandombi/NLog.Raygun.AspNetCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/armandombi/NLog.Raygun.AspNetCore</RepositoryUrl>
+    <PackageTags>C#, .Net Core, Raygun, NLog</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Mindscape.Raygun4Net.AspNetCore" Version="6.1.0" />
     <PackageReference Include="NLog" Version="4.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

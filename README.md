@@ -1,14 +1,14 @@
 NLog.Raygun
 ===========
 
-A custom [NLog] target that will push errors to [Raygun].
+A custom [NLog] target that will push errors to [Raygun] on Asp .Net Core projects.
 
 [NLog]: http://nlog-project.org/
-[Raygun]: http://raygun.io/
+[Raygun]: https://raygun.com/
 
 ## Configuration
 
-You need to configure NLog.
+To use this library you need to configure NLog.
 
 ### NLog Configuration
 
@@ -21,12 +21,12 @@ Your `NLog.config` should look something like this:
 
   <extensions>
     <!-- Add the assembly -->
-    <add assembly="NLog.Raygun"/>
+    <add assembly="NLog.Raygun.AspNetCore"/>
   </extensions>
   <targets>
     <!-- Set up the target -->
     <target name="asyncRaygun" xsi:type="AsyncWrapper">
-		<target name="RayGunTarget" type="RayGun" ApiKey="" Tags="" IgnoreFormFieldNames="" IgnoreCookieNames=""
+		<target name="RayGunTarget" type="RayGunAspNetCore" ApiKey="" Tags="" IgnoreFormFieldNames="" IgnoreCookieNames=""
 				IgnoreServerVariableNames="" IgnoreHeaderNames=""
 				layout="${uppercase:${level}} ${message} ${exception:format=ToString,StackTrace}${newline}"/>
 	</target>
