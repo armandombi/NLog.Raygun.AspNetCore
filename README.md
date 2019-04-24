@@ -24,16 +24,24 @@ Your `NLog.config` should look something like this:
     <add assembly="NLog.Raygun.AspNetCore"/>
   </extensions>
   <targets>
-    <!-- Set up the target -->
-    <target name="asyncRaygun" xsi:type="AsyncWrapper">
-		<target name="RayGunTarget" type="RayGunAspNetCore" ApiKey="" Tags="" IgnoreFormFieldNames="" IgnoreCookieNames=""
-				IgnoreServerVariableNames="" IgnoreHeaderNames=""
-				layout="${uppercase:${level}} ${message} ${exception:format=ToString,StackTrace}${newline}"/>
-	</target>
+    <target 
+      name="RayGunTarget" 
+      type="RayGunAspNetCore" 
+      ApiKey="" 
+      Tags="" 
+      IgnoreFormFieldNames="" 
+      IgnoreCookieNames="" 
+      IgnoreServerVariableNames="" 
+      IgnoreHeaderNames="" 
+      UserIdentityInfo="" 
+      UseExecutingAssemblyVersion="false" 
+      ApplicationVersion="" 
+      layout="${uppercase:${level}} ${message} ${exception:format=ToString,StackTrace}${newline}"
+        />
   </targets>
   <rules>
     <!-- Set up the logger. -->
-    <logger name="*" minlevel="Info" writeTo="RayGunTarget" />
+    <logger name="*" minlevel="Warn" writeTo="RayGunTarget" />
   </rules>
 </nlog>
 ```
